@@ -1,10 +1,5 @@
-def es_primo(n: int) -> bool:
+def es_bisiesto(n: int) -> bool:
     """
-    Determina si un número es primo.
+    Determina si un año es bisiesto.
     """
-    if n == 1:
-        return False
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return True
+    return n % 4 == 0 and (n % 100 != 0 or n % 400 == 0)
